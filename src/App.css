@@ -1,0 +1,36 @@
+body {
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #412104;
+}
+
+h1 {
+  font-family: "Imperial Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 80px;
+  color: #915200;
+}
+
+h3 {
+  color: #012401;
+}
+
+.fancy-images {
+  display: flex;
+  justify-content: center;
+  gap: 12px
+}
+
+.finally {
+  width: 100%;
+  text-align: left;
+}
+
+.fancy-images img {
+  max-height: 100px;
+  height: 20vw;
+}
