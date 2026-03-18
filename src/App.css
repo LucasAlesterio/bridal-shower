@@ -1,23 +1,33 @@
-body {
-  display: flex;
-  flex-direction: column;
-  padding: 12px;
-
+.content {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: #412104;
+  padding: 12px;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 8px;
 }
 
 h1 {
   font-family: "Imperial Script", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: 80px;
+  font-size: 4rem;
   color: #915200;
 }
 
-h3 {
-  color: #012401;
+@media(min-width: 768px) {
+  h1 {
+    font-size: 5rem;
+  }
 }
+
+h3 {
+  color: #034d03;
+}
+
 
 .fancy-images {
   display: flex;
@@ -33,4 +43,55 @@ h3 {
 .fancy-images img {
   max-height: 100px;
   height: 20vw;
+}
+
+.color-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 0;
+}
+
+.color-container {
+  display: flex;
+  max-width: 40%;
+  position: relative;
+  height: 80px;
+  min-width: 40%;
+  align-items: center;
+  justify-content: start;
+}
+
+.circle-color {
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  aspect-ratio: 1;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  gap: 4px;
+}
+
+.links > a {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  text-decoration: none;
+  color: #412104;
+  border-radius: 24px;
+  border: 4px solid #c0a892;
+}
+
+.links > a:hover {
+  background-color: #cec6b9;
+}
+
+.links > a > img {
+  width: 80px;
 }

@@ -2,17 +2,30 @@ import "./App.css";
 import spiceImage from "./assets/spices.png";
 import kitchenUtensils from "./assets/kitchen-utensils.png";
 import knife from "./assets/knife.png";
+import checkCircle from "./assets/check-circle.svg";
+import gift from "./assets/gift.svg";
+import mail from "./assets/mail.svg";
 
 function App() {
   function buildElementColors(colors: string) {
     const arrayColors = colors.split(",");
-    return arrayColors.map((color) => (
-      <div key={color} style={{ background: color }} />
+    const offsetVw = 6;
+    const offsetDefault = 40;
+    return arrayColors.map((color, index) => (
+      <div
+        className="circle-color"
+        key={color}
+        style={{
+          background: color,
+          zIndex: index + 1,
+          transform: `translateX(min(${offsetDefault * index}px, calc(${index}*${offsetVw}vw)))`,
+        }}
+      />
     ));
   }
 
   return (
-    <body>
+    <div className="content">
       <h3 className="finally">Finalmente...</h3>
       <h1>{import.meta.env.VITE_NAME_BRIDE}</h1>
       <h3>CALMA!</h3>
@@ -42,19 +55,28 @@ function App() {
         eletrodomésticos:
       </span>
 
-      <section>
-        {buildElementColors(import.meta.env.VITE_COLORS_UTENSILS)}
-        {buildElementColors(import.meta.env.VITE_COLORS_HOME_APPLIANCES)}
+      <section className="color-section">
+        <div className="color-container">
+          {buildElementColors(import.meta.env.VITE_COLORS_UTENSILS)}
+        </div>
+        <div className="color-container">
+          {buildElementColors(import.meta.env.VITE_COLORS_HOME_APPLIANCES)}
+        </div>
       </section>
 
-      <section>
+      <section className="links">
         <a href={import.meta.env.VITE_URL_CONFIRMATION_ATTENDANCE}>
+          <img src={checkCircle} />
           Confirme sua presença
         </a>
 
-        <a href={import.meta.env.VITE_URL_GIFT_LIST}>Lista de presentes</a>
+        <a href={import.meta.env.VITE_URL_GIFT_LIST}>
+          <img src={gift} />
+          Lista de presentes
+        </a>
 
         <a href={import.meta.env.VITE_URL_MESSAGE_TO_BRIDE}>
+          <img src={mail} />
           Mensagem para os noivos
         </a>
       </section>
@@ -64,7 +86,7 @@ function App() {
         como uma sugestão para ajudar. Mas fiquem à vontade para escolher algo
         diferente.
       </span>
-    </body>
+    </div>
   );
 }
 
