@@ -5,6 +5,7 @@ import knife from "./assets/knife.png";
 import checkCircle from "./assets/check-circle.svg";
 import gift from "./assets/gift.svg";
 import mail from "./assets/mail.svg";
+import map from "./assets/map.svg";
 
 function App() {
   function buildElementColors(colors: string) {
@@ -46,7 +47,8 @@ function App() {
       <span>
         O Chá de Panela será realizado no dia{" "}
         <b>{import.meta.env.VITE_EVENT_DATE}</b> à partir das{" "}
-        <b>{import.meta.env.VITE_EVENT_TIME}</b>, pedimos a confirmação até o
+        <b>{import.meta.env.VITE_EVENT_TIME}</b>, no endereço{" "}
+        <b>{import.meta.env.VITE_EVENT_ADDRESS}</b>. Pedimos a confirmação até o
         dia <b>{import.meta.env.VITE_EVENT_DATE_LIMIT_CONFIRMATION}</b>.
       </span>
 
@@ -73,6 +75,11 @@ function App() {
         <a href={import.meta.env.VITE_URL_GIFT_LIST}>
           <img src={gift} />
           Lista de presentes
+        </a>
+
+        <a href={import.meta.env.VITE_URL_ADDRESS}>
+          <img src={map} />
+          Como chegar
         </a>
 
         <a href={import.meta.env.VITE_URL_MESSAGE_TO_BRIDE}>

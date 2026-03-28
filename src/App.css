@@ -70,15 +70,26 @@ h3 {
 }
 
 .links {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4px;
+}
+
+@media(min-width: 900px) {
+  .links {
+    display: flex;
+    justify-content: space-around;
+    gap: 4px;
+  }
+
+  .links > a {
+    min-width: 180px;
+  }
 }
 
 .links > a {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   align-items: center;
   gap: 12px;
   padding: 12px;
