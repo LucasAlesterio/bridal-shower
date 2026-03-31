@@ -52,6 +52,31 @@ function App() {
         dia <b>{import.meta.env.VITE_EVENT_DATE_LIMIT_CONFIRMATION}</b>.
       </span>
 
+      <span className="more-info">
+        <h3>Informações Importantes 💛</h3>
+        <div>
+          <b>📅 Hora e local: </b> O Chá de Panela será realizado no dia{" "}
+          <b>{import.meta.env.VITE_EVENT_DATE}</b> à partir das{" "}
+          <b>{import.meta.env.VITE_EVENT_TIME}</b>, no endereço{" "}
+          <b>{import.meta.env.VITE_EVENT_ADDRESS}</b>. Pedimos a confirmação até
+          o dia <b>{import.meta.env.VITE_EVENT_DATE_LIMIT_CONFIRMATION}</b>.
+        </div>
+        <div>
+          <b>🏊 Piscina aquecida:</b> O local possui piscina aquecida! Quem
+          quiser aproveitar pode trazer roupa de banho e toalha.
+        </div>
+        <div>
+          <b>🥤 Bebidas: </b> Nós iremos oferecer: Água, Suco e Refrigerante.
+        </div>
+        <div>
+          <b>🍺 Bebidas alcoólicas: </b> Se quiserem consumir bebidas
+          alcoólicas, cada convidado pode levar a sua bebida de preferência.
+        </div>
+        <div>
+          <b>🎯 Brincadeiras e muitas risadas</b>
+        </div>
+      </span>
+
       <span>
         Nossa casa seguirá a seguinte paleta de cores para utensílios e
         eletrodomésticos:
