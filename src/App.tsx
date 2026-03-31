@@ -44,13 +44,6 @@ function App() {
         <img src={kitchenUtensils} />
         <img src={knife} />
       </section>
-      <span>
-        O Chá de Panela será realizado no dia{" "}
-        <b>{import.meta.env.VITE_EVENT_DATE}</b> à partir das{" "}
-        <b>{import.meta.env.VITE_EVENT_TIME}</b>, no endereço{" "}
-        <b>{import.meta.env.VITE_EVENT_ADDRESS}</b>. Pedimos a confirmação até o
-        dia <b>{import.meta.env.VITE_EVENT_DATE_LIMIT_CONFIRMATION}</b>.
-      </span>
 
       <span className="more-info">
         <h3>Informações Importantes 💛</h3>
